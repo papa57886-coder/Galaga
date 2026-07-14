@@ -1,7 +1,56 @@
-body, html {
+html, body, #root {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden; 
+  overflow: hidden;
+  max-width: 100% !important;
+  border-inline: none !important;
+}
+
+
+.galaga-root {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.galaga-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('C:\\Users\\angel\\Documents\\GitHub\\Galaga\\frontend\\public\\assets\\wallpaper.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: brightness(0.45);
+  z-index: 0;
+}
+
+
+.galaga-layout {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  gap: 0;
+}
+
+
+.galaga-panel {
+  flex: 1;
+  max-width: 280px;
+  height: 600px;
+  display: flex;
+  align-items: flex-start;
+  padding: 0 24px;
+  box-sizing: border-box;
+  overflow-y: auto;
 }
