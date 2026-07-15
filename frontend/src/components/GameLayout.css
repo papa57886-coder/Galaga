@@ -1,0 +1,52 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+
+.game-layout-root {
+  /* Usamos la ruta absoluta a la carpeta public basándonos en tu estructura */
+  background-image: url('/assets/wallpaper.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+ 
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem; 
+  overflow: hidden;
+}
+
+.retro-panel {
+  width: 280px;
+
+  background-color: rgba(0, 0, 0, 0.75); 
+  border: 2px solid #d32f2f;
+  box-shadow: 0 0 15px rgba(211, 47, 47, 0.5); 
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.retro-title {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 14px; 
+  color: #ff3333; 
+  text-shadow: 2px 2px 0px #000;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.retro-text {
+  font-family: 'VT323', monospace;
+  font-size: 24px;
+  color: #e0e0e0;
+  line-height: 1.2;
+  text-shadow: 1px 1px 0px #000;
+}
+
+
+.game-container-slot {
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.8); 
+}
