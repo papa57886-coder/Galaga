@@ -21,4 +21,5 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/guardar-puntuacion/', views.guardar_puntuacion, name='guardar_puntuacion'),
+    path('api/top-puntuaciones/', views.obtener_top_puntuaciones, name='top_puntuaciones'),
 ]

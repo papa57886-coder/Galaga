@@ -16,3 +16,22 @@ def guardar_puntuacion(request):
         except Exception as e:
             return JsonResponse({'error': str(e)}, status=400)
     return JsonResponse({'error': 'Método no permitido'}, status=405)
+
+def obtener_top_puntuaciones(request):
+    if request.method == 'GET':
+        try:
+            
+            top_10 = Puntuacion.objects.order_by('-score')[:10]
+            data = [
+                {
+                    'id': p.id,
+                    'nombre': p.nombre,
+                    'score': p.score,
+                    'fecha': p.fecha.strftime('%Y-%m-%d %H:%M') if p.fecha else None
+                }
+                for p in top_10
+            ]
+            return JsonResponse(data, safe=False, status=200)
+        except Exception as e:
+            return JsonResponse({'error': str(e)}, status=500)
+    return JsonResponse({'error': 'Método no permitido'}, status=405)
